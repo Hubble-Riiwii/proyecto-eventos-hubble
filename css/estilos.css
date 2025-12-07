@@ -134,7 +134,7 @@ body {
 @media (max-width: 768px) {
   #hero {
     position: relative;
-    background-image: url("../asserts/hero.gif"); 
+    background-image: url("../asserts/hero.png"); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -174,4 +174,5 @@ body {
 .navbar-logo {
   height: 48px;
   width: auto;
+
 }
