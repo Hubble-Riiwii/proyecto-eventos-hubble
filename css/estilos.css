@@ -1,0 +1,177 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVBAR */
+.custom-navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: 60%; 
+    padding: 12px 25px;
+    
+    background: #dbdbdbcc; 
+    backdrop-filter: blur(10px); 
+    border-radius: 30px;
+
+    opacity: 0.20;
+    transition: opacity 0.4s ease;
+    z-index: 999;
+}
+
+/* logo */
+.navbar-logo {
+    width: 80px;
+    align-self: flex-start;
+}
+
+.custom-navbar:hover {
+    opacity: 1;
+}
+
+/* menú */
+.custom-navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+    align-items: center; 
+}
+
+.custom-navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    margin: 7px;
+}
+
+.btn-custom:hover {
+    border: none;
+    background-color: #67676725;
+}
+
+
+.btn-login:hover {
+    background-color: #4B04FF;
+     color: white !important;
+}
+
+/* Respuesta de mobile */
+@media (max-width: 768px) {
+    .navbar-logo {
+        width: 40px;
+    }
+    .custom-navbar {
+        width: 90%;
+        padding: 10px 20px;
+    }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+}
+
+/* Hero  */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.hero-img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* Tipografías del hero */
+#autoText {
+  display: inline-block;
+  min-width: 20rem;
+  min-height: 10rem;
+  font-size: 6.25rem;
+  font-weight: bold;
+  color: #0d6efd;
+  border-right: 0.125rem solid transparent;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.slogan-custom {
+  font-family: "Smooch Sans", sans-serif;
+  font-size: 6rem;
+  color: inherit;
+}
+
+/* Breakpoints */
+@media (max-width: 992px) {
+  #autoText {
+    font-size: 4rem;
+    min-width: 15rem;
+    min-height: 8rem;
+  }
+  .slogan-custom {
+    font-size: 3.5rem;
+  }
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+  #hero {
+    position: relative;
+    background-image: url("../asserts/hero.gif"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(68, 49, 193, 0.35);
+    pointer-events: none;
+  }
+
+  .hero-media {
+    display: none;
+  }
+
+  .hero-content {
+    margin-top: 15rem;
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+  }
+
+  #autoText {
+    font-size: 2.5rem;
+    min-width: 12rem;
+    min-height: 6rem;
+  }
+
+  .slogan-custom {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+.navbar-logo {
+  height: 48px;
+  width: auto;
+}
