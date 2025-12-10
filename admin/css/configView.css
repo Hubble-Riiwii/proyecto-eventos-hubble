@@ -46,9 +46,9 @@ form input:focus {
 /* Botón compacto */
 .btnUpdate {
     display: block;
-    margin: 15px auto 0 auto;
+    margin: 10px auto 0 auto;
     width: 310px;               /* Igual al formulario */
-    padding: 10px;              /* Más pequeño */
+    padding: 5px;              /* Más pequeño */
     border: none;
     background: #6366f1;
     color: white;
