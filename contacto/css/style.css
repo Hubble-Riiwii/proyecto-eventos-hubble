@@ -1,7 +1,83 @@
 body {
-    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVBAR */
+.custom-navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: 60%; 
+    padding: 12px 25px;
+    
+    background: #dbdbdbcc; 
+    backdrop-filter: blur(10px); 
+    border-radius: 30px;
+
+    opacity: 0.20;
+    transition: opacity 0.4s ease;
+    z-index: 999;
+}
+
+/* logo */
+.navbar-logo {
+    width: 80px;
+    align-self: flex-start;
+}
+
+.custom-navbar:hover {
+    opacity: 1;
+}
+
+/* menú */
+.custom-navbar ul {
+    list-style: none;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+    align-items: center; 
+}
+
+.custom-navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    margin: 7px;
+}
+
+.btn-custom:hover {
+    border: none;
+    background-color: #67676725;
+}
+
+
+.btn-login:hover {
+    background-color: #4B04FF;
+     color: white !important;
+}
+
+/* Respuesta de mobile */
+@media (max-width: 768px) {
+    .navbar-logo {
+        width: 40px;
+    }
+    .custom-navbar {
+        width: 90%;
+        padding: 10px 20px;
+    }
+}
+.navbar-logo {
+  height: 48px;
+  width: auto;
+
 }
 
 /* MAIN */
