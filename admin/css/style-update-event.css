@@ -1,0 +1,64 @@
+/* Contenedor */
+.tabla-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f7f8fa;
+    border-radius: 8px;
+}
+
+/* Título */
+.tabla-container h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Tabla */
+.tabla-form {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-form td {
+    padding: 12px;
+}
+
+/* Columna izquierda */
+.tabla-form .label {
+    width: 250px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Inputs y selects */
+.tabla-form input,
+.tabla-form select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Botón centrado */
+.boton-centro {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-actualizar {
+    background: #17a624;
+    color: white;
+    padding: 12px 28px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-actualizar:hover {
+    background: #13901f;
+}

@@ -1,0 +1,214 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MAIN */
+/* MAIN GENERAL */
+main {
+    flex: 1;
+    margin: 20vh 5vw 5vw 5vw;
+    min-width: 0;     
+}
+
+main h1 {
+    text-align: center;
+    font-size: clamp(1.4rem, 3vw, 3rem);   
+    margin-bottom: 2rem;
+}
+
+
+/*CONTENEDOR DE BLOQUE*/
+.div-chanels {
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+    height: auto;        
+    min-width: 0;
+}
+
+/* CADA BLOQUE */
+.div-contact {
+    flex: 1;
+    border: 1px solid black;
+    padding: 1.5rem .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    min-width: 0;   
+    overflow: hidden;
+    border-radius: 10px;
+    justify-content: space-between;  
+    padding: 1rem;
+}
+
+
+/* TITULOS */
+.div-contact h2 {
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.8rem);   
+    margin: 0;
+    padding: 0 1rem;
+    overflow-wrap: break-word;            
+}
+
+/* CONTENEDOR FIJO PARA LAS IMÁGENES */
+.div-contact a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Altura fija proporcional para alinear todas igual */
+    height: 12rem;
+    width: 100%;
+    overflow: hidden;
+    min-width: 0;
+}
+
+
+
+/* IMÁGENES */
+.div-contact img {
+    width: clamp(6rem, 40%, 12rem);   
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;          
+    display: block;
+}
+
+
+
+/* FOOTER */
+footer {
+    height: 22vh;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    background-color: #999;
+    max-width: 100%;
+}
+
+.div-footer {
+    /* border: 1px solid green; */
+    flex: 1;
+}
+
+/*redes sociales*/
+.networks {
+    display: flex;
+    min-width: 0;  
+    gap: 1rem;
+}
+
+.div-r {
+    flex: 1;
+    min-width: 0; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    place-items: center;
+    overflow: hidden;
+}
+
+/* el link (celda) también debe poder encogerse */
+.div-r a {
+    min-width: 0;
+    min-height: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Arreglando imagenes */
+.div-r img {
+    width: 100%;
+    height: 100%;
+    max-width: 3rem;      
+    max-height: 3rem;     
+    object-fit: contain;
+    transition: 0.2s;
+}
+
+.div-r img:hover {
+    transform: scale(1.1);
+}
+
+.div-l {
+    flex: 1;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;     
+    min-width: 0;            
+    text-align: center;
+}
+
+.div-l h3 {
+    margin: 0 0 0.5rem 0; 
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+}
+
+.div-l a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+}
+
+.div-l img {
+    width: clamp(2rem, 8vw, 6rem);
+    max-width: 100%; 
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+    transition: .2s;
+}
+
+
+.div-l img:hover {
+    transform: scale(1.1);
+}
+
+/*Our company*/
+/* ---- Bloques del footer (empresa, ayuda, legal) ---- */
+.div-footer h3 {
+    margin: 0.5rem 0 0.5rem 0;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    text-align: center;
+}
+
+.our-company, .pqrs, .legal {
+    box-sizing: border-box;
+}
+
+.div-footer ul {
+    list-style: none;
+    padding: 0 2px;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+
+.div-footer li a {
+    text-decoration: none;
+    color: black;
+    font-size: clamp(0.9rem, 1.6vw, 1.1rem);
+    transition: 0.2s;
+}
+
+.div-footer li a:hover {
+    color: #00a;
+    transform: translateX(3px);
+}
+
+
+
