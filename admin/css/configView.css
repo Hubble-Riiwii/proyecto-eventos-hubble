@@ -1,0 +1,118 @@
+/* Contenedor del título */
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Formulario compacto */
+form {
+                  /* Más compacto */
+    margin: auto 40px;             /* Centrado */
+    background: #fff;
+    padding: 18px;              /* Más pequeño */
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;                   /* Menor espacio entre elementos */
+}
+
+/* Etiquetas compactas */
+form label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Inputs compactos */
+form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+form input:focus {
+    border-color: #6366f1;
+    outline: none;
+    box-shadow: 0 0 4px rgba(99,102,241,0.3);
+}
+
+/* Botón compacto */
+.btnUpdate {
+    display: block;
+    margin: 15px auto 0 auto;
+    width: 310px;               /* Igual al formulario */
+    padding: 10px;              /* Más pequeño */
+    border: none;
+    background: #6366f1;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btnUpdate:hover {
+    background: #4f46e5;
+}
+
+
+table {
+
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden; /* redondeo también en las filas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+thead th {
+    background: #1e293b; /* azul oscuro elegante */
+    color: #fff;
+    padding: 15px;
+    font-weight: 600;
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+
+tbody td {
+    padding: 14px 16px;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+tbody tr:hover {
+    background: #f1f5f9;
+    transition: 0.2s;
+}
+
+
+@media (max-width: 768px) {
+    table {
+        width: 95%;
+        font-size: 12px;
+    }
+
+    thead th,
+    tbody td {
+        padding: 10px;
+    }
+}

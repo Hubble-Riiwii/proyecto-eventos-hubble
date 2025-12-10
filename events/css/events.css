@@ -1,0 +1,364 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden; 
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    line-height: 1.6;
+}
+
+body {
+    background-image: url("../images/demos/backgroundimage.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.events {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 95vh; 
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2vh 0;
+}
+
+
+.events h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    margin-top: 75px;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 15px;
+    flex-shrink: 0;
+}
+
+.events h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #FFD700, transparent);
+}
+
+
+
+.info {
+    max-width: 800px;
+    margin: 1vh auto;
+    flex-shrink: 0;
+}
+
+.info p {
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
+    font-weight: 400;
+    line-height: 1.7;
+    color: #F0F0F0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2vh;
+    padding: 0 15px;
+}
+
+.search {
+    margin-top: 2vh;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search input {
+    padding: 14px 22px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    width: 350px;
+    max-width: 60%;
+    outline: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.search input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+}
+
+.search input:focus {
+    border-color: rgba(255, 215, 0, 0.6);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+.search button {
+    padding: 14px 30px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 215, 0, 0.9);
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.search button:hover {
+    background: rgba(255, 215, 0, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+
+
+.carousel-container {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 250px;
+    max-height: 400px;
+    position: relative;
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+    position: relative;
+    flex: 1;
+    margin:10px auto;
+}
+
+.track {
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.logos {
+    display: flex;
+    gap: 30px;
+    padding-right: 30px;
+}
+
+.logos img {
+    width: clamp(160px, 18vw, 220px);
+    height: clamp(160px, 18vw, 220px);
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.logos .event p:first-of-type {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-top: 12px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+.logos .event p:nth-of-type(2) {
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    font-weight: 400;
+    color: #CCCCCC;
+    margin-top: 5px;
+}
+
+
+.logos .event {
+    transition: all 0.4s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logos .event:hover {
+    transform: translateY(-8px);
+}
+
+.logos .event:hover img {
+    border-color: rgba(255, 215, 0, 0.6);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+}
+
+
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+.carousel::before,
+.carousel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.carousel::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(6, 6, 9, 0.9), transparent);
+}
+
+.carousel::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(6, 6, 9, 0.9), transparent);
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+    .events {
+        height: 100vh; 
+        padding: 1vh 0;
+    }
+    
+    .carousel-container {
+        max-height: 350px;
+    }
+    
+    .logos img {
+        width: clamp(150px, 20vw, 180px);
+        height: clamp(150px, 20vw, 180px);
+    }
+}
+
+@media (max-width: 768px) {
+    .events {
+        justify-content: center;
+        gap: 3vh;
+    }
+    
+    .events h2 {
+        font-size: 2.2rem;
+        padding-bottom: 10px;
+    }
+    
+    .events h2::after {
+        width: 80px;
+    }
+    
+    .info {
+        margin: 0 auto 2vh;
+    }
+    
+    .info p {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+    
+    .search {
+        flex-direction: column;
+        width: 90%;
+        gap: 15px;
+    }
+    
+    .search input {
+        width: 100%;
+        max-width: 100%;
+        padding: 12px 18px;
+    }
+    
+    .search button {
+        width: 100%;
+        padding: 12px;
+    }
+    
+    .carousel-container {
+        max-height: 300px;
+    }
+    
+    .carousel::before,
+    .carousel::after {
+        width: 80px;
+    }
+    
+    .logos {
+        gap: 20px;
+        padding-right: 20px;
+    }
+    
+    .logos img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .events h2 {
+        font-size: 1.8rem;
+    }
+    
+    .info p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    
+    .carousel-container {
+        max-height: 250px;
+    }
+    
+    .logos img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .logos .event p:first-of-type {
+        font-size: 1rem;
+    }
+    
+    .carousel::before,
+    .carousel::after {
+        width: 50px;
+    }
+}
